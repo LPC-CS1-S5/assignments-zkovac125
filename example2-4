@@ -1,0 +1,23 @@
+#include <isostream>
+using namespace std;
+int main(){
+
+int moneyearned= 6000;
+double percent1 = 0.5;
+double percent 2= 0.07;
+double percent 3= 0.1;
+//double percent4 = 0.5;
+
+double intoSavings1;
+double intoSavings2;
+
+double intoSavings3:
+intoSavings1 = Earned*percent1;
+intoSavings1 = Earned*percent2;
+intoSavings1 = Earned*percent3;
+
+cout<< "If you put 5% in savings you will put" "<< intoSavings1 <<
+cout<< "If you put 7% in savings you will put" "<< intoSavings2 <<
+cout<< "If you put 10% in savings you will put" "<< intoSavings3 <<
+//return 0;
+}
