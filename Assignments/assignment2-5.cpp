@@ -8,7 +8,9 @@
 
 using namespace std;
 
-int main() {
+int main() 
+{
+
   double meal_price = 88.67;
   float meal_tax_percent = 1.0675:
   double meal_tip = 0.2;

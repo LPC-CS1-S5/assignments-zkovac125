@@ -7,16 +7,18 @@
 using namespace std;
 int main() 
 {
-    double workHours = 50;
+    double workHours=50;
     double regularWages, overtimeWages;
-    double basePayRate = 18.25, overtimePayRate = 27.78;
-    double regularHours = 40.0, overtimeHours;
+    double basePayRate=18.25, overtimePayRate=27.78;
+    double regularHours=40.0, overtimeHours;
     double totalWages;
 
     regularWages = basePayRate * regularHours;
-    overtimeHours = workHours - regularHours
-    overtimeWages = overtimePayrate + overtimeHours;
-    totalWages = regular wages + overtimeWages;
+    overtimeHours = workHours - regularHours;
+    overtimeWages = overtimeHours + overtimePayRate;
+    totalWages = regularWages + overtimeWages;
+
     cout << "Regular Wages " << regularWages << endl;
-    
+    cout << "Overtime Wages " << overtimeWages << endl;
+    cout << "Total Wages " << totalWages << endl;
 }
