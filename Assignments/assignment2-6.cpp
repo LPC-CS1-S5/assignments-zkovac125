@@ -7,6 +7,7 @@
 //Display the sum and average with precision 3 on the screen.
 
 #include <iostream>
+#include <iosmanip>
 using namespace std;
 
 int main()
@@ -21,6 +22,6 @@ int main()
   
 
   cout << "Sum: " << sum << endl;
-  cout << "Average: " << average << endl;
+  cout << "Average: " << average << setpercision(3) << endl;
   
 }
