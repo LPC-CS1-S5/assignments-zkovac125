@@ -3,11 +3,11 @@
 using namespace std;
 int main()
 {
-const int classA =15;
-const int classB =12;
-const int classC =9;
+const int classA = 15;
+const int classB = 12;
+const int classC = 9;
 int ticketA, ticketB, ticketC;
-double cost;
+float cost;
 
 cout << "Enter number of tickets sold\n";
   cin >> ticketA >> ticketB >> ticketC;

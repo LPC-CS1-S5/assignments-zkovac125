@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -11,6 +12,6 @@ int main()
 
   fahrenheit = 9/5.0 * celcius + 32;
 
-  cout << "Celcius " << celcius << "is " << fahrenheit << "Fahrenheit\n";
-  cout << setprecision(3)
+  cout << celcius << " Celcius" << setprecision(3) << " is " << fahrenheit << setprecision(3) << " Fahrenheit\n";
+  
 }
