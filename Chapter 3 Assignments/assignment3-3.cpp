@@ -12,6 +12,6 @@ int main()
 
   fahrenheit = (9/5.0) * celcius + 32;
 
-  cout << celcius << " Celcius" << setprecision(3) << " is " << fahrenheit << setprecision(3) << " Fahrenheit\n";
+  cout << celcius << " Celcius" << fixed << std::setprecision(3) << " is " << fahrenheit << fixed <<std::setprecision(3) << " Fahrenheit\n";
   
 }
