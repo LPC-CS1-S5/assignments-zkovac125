@@ -10,10 +10,10 @@ int main()
   double rate, weight, distance;
   double total_Price;
 
-  cout "Enter the weight in kilograms: " << endl;
-   cin>> weight;
-  cout "Enter the distance in miles: " << endl;
-   cin>> distance;
+  cout << "Enter the weight in kilograms: " << endl;
+   cin >> weight;
+  cout << "Enter the distance in miles: " << endl;
+   cin >> distance;
   
   if ((weight < 0) || (weight > 20))
     exit (0);
@@ -27,7 +27,7 @@ int main()
   else if (weight < 20)
     rate = W20;
   
-  if ((distance 20) || (distance 3000))
+  if ((distance < 20) || (distance >3000))
     exit (0);
   if (distance > 500)
   total_Price = distance / 500 + rate;
