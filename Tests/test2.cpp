@@ -1,10 +1,16 @@
 #include <iostream> 
 #include <string>
-using namespace std; 
+using namespace std;
 
-int main()
+int main ()
 {
-  double i;
-  i = 12.345;
-  cout << i << endl;
+  int i;
+  int num;
+
+ i=0; num = 10;
+  while ( i<num) {
+    cout << i++ << num;
+    num += 1;
 }
+}
+
