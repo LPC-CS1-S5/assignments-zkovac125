@@ -32,5 +32,4 @@ int main()
     power_Number = power_Number;
   }
 }
-//question 3
-//question 4
+
