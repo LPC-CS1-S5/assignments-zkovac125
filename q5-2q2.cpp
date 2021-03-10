@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
   int base;
-  int exp;
+  int exp; 
   int power_Number;
   int i;
   int start, end;
