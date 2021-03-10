@@ -1,3 +1,7 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 int main()
@@ -6,13 +10,13 @@ int main()
   int exp;
   int power_Number;
   int i;
-  int end;
+  int start, end;
 
-  cout << "Enter the base and the power nu,ber please: ";
+  cout << "Enter the base and the power number please: ";
   cin >> base >> exp;
 
   i = 0;
-  power_Number = 1;
+  power_Number = ;
   while( i < exp )
   {
     power_Number = power_Number * base;
@@ -25,7 +29,7 @@ int main()
     power_Number += 2;
   }
   while( power_Number < end){
-    power_Number = power_Number
+    power_Number = power_Number;
   }
 }
 //question 3
