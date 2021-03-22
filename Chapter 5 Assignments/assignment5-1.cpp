@@ -5,12 +5,10 @@ using namespace std;
 int main()
 {
   // variables
-  int base;
-  int exp;
+  int base, exp;
   int power_Number;
   int i;
-  int start;
-  int end;
+  int start, end;
 
   cout << "Enter the base and power number please: " ;
   cin >> base >> exp;

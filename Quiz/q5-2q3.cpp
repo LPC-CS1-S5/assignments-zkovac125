@@ -29,7 +29,7 @@ int checkPrimeNumber(int n){
          isPrime = false;
          break;
        }
-       
+  
      }
      return isPrime;
    }
