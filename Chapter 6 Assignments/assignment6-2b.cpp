@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//global variable for 
 void primenum(int, int);
 
 int main()
