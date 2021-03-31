@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-  int N,i,j;
+  int N,i,j,a;
   string stuName;
   double num =0,score_1, score_2, average, score_Sum1 =0,classSum =0, classAvg =0, numberAverage =0;
   ofstream ofs;
@@ -29,16 +29,16 @@ int main()
      score_Sum1 += score_2;
      classSum = score_1 + score_2;
      average = (score_1/score_2)/2;
-      if (average>80; num++){
+     ofs << average << " " <<endl;
+      if (average =a; average>80; num++){
         numberAverage = num + 1;
-      }else(average<80{
+      } else (average<80{
         numberAverage = num;
       }
-     ofs << average << " " <<endl;
-     break;
+    break;
     }
-  }
     ofs << "The total number of students who have an average greter than 80: " << numberAverage << endl;
     ofs.close(); 
+  }
   }
      
