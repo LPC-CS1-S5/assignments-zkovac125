@@ -30,14 +30,15 @@ int main()
      classSum = score_1 + score_2;
      average = (score_1/score_2)/2;
      ofs << average << " " <<endl;
-      if (average =a; average>80; num++){
-        numberAverage = num + 1;
-      } else (average<80{
+      if (average>80){
+        average=a;
+        numberAverage = num++;
+      } else (average<80)
         numberAverage = num;
+        break;
       }
-    break;
     }
-    ofs << "The total number of students who have an average greter than 80: " << numberAverage << endl;
+    ofs << "The total number of students who have an average greater than 80: " << numberAverage << endl;
     ofs.close(); 
   }
   }
