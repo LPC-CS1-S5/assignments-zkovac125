@@ -34,38 +34,16 @@ void getRandnum(int n1, int n2, int n3){
 }
 int  findMin(int n1, int n2, int n3, int min){
   static int prec_num = 0;
-        
-        if (prec_num == 0) {
-                prec_num = n1;
-                return 0;
-        }
+  static int n1;
+  static int n2;
+  static int n3;
+    n1 = n;
+    n2 = n;
+    n3 = n;
         if (prec_num > n) {
-                prec_num = n1;
-                n1 = min;
+                n = min;
         } else {
-                prec_num = n1;
-                return 0;
-        }
-        if (prec_num == 0) {
-                prec_num = n2;
-                return 0;
-        }
-        if (prec_num > n) {
-                prec_num = n2;
-                n1 = min;
-        } else {
-                prec_num = n2;
-                return 0;
-        }
-        if (prec_num == 0) {
-                prec_num = n3;
-                return 0;
-        }
-        if (prec_num > n) {
-                prec_num = n3;
-                n1 = min;
-        } else {
-                prec_num = n3;
+                prec_num = n;
                 return 0;
         }
 
