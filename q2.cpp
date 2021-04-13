@@ -15,23 +15,21 @@ int main()
   srand(time(0));
   for (int i = 0; i < N; i++) {
    rdnum = getRdnum(n1, n2, n3);
-   cout << rdnum << "\t";
-  if (isGreater(rdnum)) {
-                        
+   cout << " The random number are : "<< n1 << n2 << n3 << endl;
+  if (findMin(rdnum)); {
+    min = findMin(n1, n2, n3);                    
                 }
   
-  min = findMin(n1, n2, n3);
   printResult(n1, n2, n3, min);
 }
-void getRandnum(int &n1, int &n2, int &n3){
+void getRandnum(int n1, int n2, int n3){
   //In this function, generate three random numbers and assign the values to the parameter n1, n2, and n3
-   for (int i = 0; i < N; i++) {
-                rdnum = getRdnum();
-                cout << rdnum << "\t";
-                if (isGreater(rdnum)) {
-                        ofs << rdnum << endl;
-                }
-
+   rand() % 100 + 1 = n1;
+   rand() % 100 + 1 = n2;
+   rand() % 100 + 1 = n3;
+   return n1;
+   return n2;
+   return n3;
 }
 int  findMin(int n1, int n2, int n3){
   static int prec_num = 0;
@@ -51,5 +49,6 @@ int  findMin(int n1, int n2, int n3){
 }
 void printResult(int n1, int n2, int n3, int min)
 {
-// Print out the results with the original numbers and the minimum value
+ cout << "the random number are: " << n1 << n2 << n3 endl;
+ cout << "The minium number is: " << min << endl;
 }
