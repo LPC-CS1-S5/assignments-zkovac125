@@ -49,3 +49,7 @@ int  findMin(int n1, int n2, int n3){
   return
 
 }
+void printResult(int n1, int n2, int n3, int min)
+{
+// Print out the results with the original numbers and the minimum value
+}
