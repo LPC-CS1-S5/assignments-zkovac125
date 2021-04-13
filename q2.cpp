@@ -14,12 +14,12 @@ int main()
   int rdnum;
   srand(time(0));
   for (int i = 0; i < N; i++) {
-  rdnum = getRdnum(n1, n2, n3);
-                cout << rdnum << "\t";
-                if (isGreater(rdnum)) {
-                        ofs << rdnum << endl;
+   rdnum = getRdnum(n1, n2, n3);
+   cout << rdnum << "\t";
+  if (isGreater(rdnum)) {
+                        
                 }
-  getRandnum(n1, n2, n3);
+  
   min = findMin(n1, n2, n3);
   printResult(n1, n2, n3, min);
 }
@@ -33,4 +33,19 @@ void getRandnum(int &n1, int &n2, int &n3){
                 }
 
 }
+int  findMin(int n1, int n2, int n3){
+  static int prec_num = 0;
+        if (prec_num == 0) {
+                prec_num = n;
+                return 0;
+        }
+        if (prec_num < n) {
+                prec_num = n;
+                return 1;
+        } else {
+                prec_num = n;
+                return 0;
+        }
+  return
 
+}
