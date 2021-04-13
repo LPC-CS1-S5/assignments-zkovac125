@@ -18,20 +18,23 @@ main()
   if(ch1== '.'){
     num1 = f1
     swapTwoFloatValues(f1,f2);
+    cout << "The new first number is: " << f1 << endl;
   }else{
     num2= n1;
     swapTwoValues(n1,n2);
+    cout << "The new first number is: " << n2 << endl;
   }
   cin.get(ch2);
   if(ch2== '.'){
     num2 = f2;
     swapTwoFloatValues(f1,f2);
+    cout << "The new second numbers is: " << tnp << endl;
   }else{
     num2 = n2;
     swapTwoValues(n1,n2);
+    cout << "The second numbers is: " << tnp << endl;
   }
-
-
+  return 0;
 }
 void swapTwoValues(int n1, int n2)
 {
@@ -39,12 +42,11 @@ void swapTwoValues(int n1, int n2)
   tap = n1;
   n1 = n2;
   n2 = tnp;
-
 }
 void swapTwoFloatValues(float f1, float f2)
 {
   int tnp;
-  tap = n1;
-  n1 = n2;
-  n2 = tnp;
+  tap = f1;
+  f1 = f2;
+  f2 = tnp;
 }
