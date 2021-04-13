@@ -1,0 +1,36 @@
+#include <iostream>
+#include <iomanip>
+#include <ctime>
+
+using namespace std;
+
+void getRandNum(int &n1, int &n2, int &n3);
+int findMin(int n1, int n2, int n3);
+void printResult(int n1, int n2, int n3, int min);
+
+const int N = 3;
+int main()
+{
+  int rdnum;
+  srand(time(0));
+  for (int i = 0; i < N; i++) {
+  rdnum = getRdnum(n1, n2, n3);
+                cout << rdnum << "\t";
+                if (isGreater(rdnum)) {
+                        ofs << rdnum << endl;
+                }
+  getRandnum(n1, n2, n3);
+  min = findMin(n1, n2, n3);
+  printResult(n1, n2, n3, min);
+}
+void getRandnum(int &n1, int &n2, int &n3){
+  //In this function, generate three random numbers and assign the values to the parameter n1, n2, and n3
+   for (int i = 0; i < N; i++) {
+                rdnum = getRdnum();
+                cout << rdnum << "\t";
+                if (isGreater(rdnum)) {
+                        ofs << rdnum << endl;
+                }
+
+}
+
