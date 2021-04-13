@@ -6,7 +6,7 @@ using namespace std;
 int n1;
 int n2;
 char ch1, ch2;
-int f1;
+int f1;    
 int f2;
 
 void swapTwoValues(int &,int &);
