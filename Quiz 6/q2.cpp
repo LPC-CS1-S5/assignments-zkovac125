@@ -25,6 +25,7 @@ int main()
   printResult(n1, n2, n3, min);
 }
 void getRandnum(int n1, int n2, int n3){
+// void getRandnum(int &n1, int &n2, int &n3){
    n1 = rand() % 100 + 1;
    n2 = rand() % 100 + 1;
    n3 = rand() % 100 + 1;
@@ -33,19 +34,27 @@ void getRandnum(int n1, int n2, int n3){
    return n3;
 }
 int  findMin(int n1, int n2, int n3, int min){
-  static int prec_num = 0;
-  static int n1;
-  static int n2;
-  static int n3;
-    n1 = n;
-    n2 = n;
-    n3 = n;
-        if (prec_num > n) {
-                n = min;
-        } else {
-                prec_num = n;
-                return 0;
-        }
+	// No need to declare n1, n2, n3 since they are parameter.
+	// No need to use the static variable
+//   static int prec_num = 0;
+//   static int n1;
+//   static int n2;
+//   static int n3;
+    // n1 = n;
+    // n2 = n;
+    // n3 = n;
+    //     if (prec_num > n) {
+    //             n = min;
+    //     } else {
+    //             prec_num = n;
+    //             return 0;
+    //     }
+		// Make a code find the min
+		// min = n1;
+		// if ( min > n2)
+		// 		min = n2;
+		//    if (min > n3)
+		//    		min = n3;
 
 }
 void printResult(int n1, int n2, int n3, int min)
