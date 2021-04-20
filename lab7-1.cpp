@@ -16,6 +16,9 @@ const int SIZE = 100;
 int main()
 {
   int number[SIZE];
+
+
+  
   int last;
 
   last = makearray(number);
