@@ -14,6 +14,8 @@ void printout(int [], int);
 
 const int SIZE = 100;
 
+SLDMlS
+
 int main()
 {
   int mask[SIZE];
