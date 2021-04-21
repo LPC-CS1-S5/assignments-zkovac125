@@ -7,7 +7,11 @@ int finduserstring(char[], int, char[], int);
 int main() {
         int cstrlen, userlen, position;
         char cstr[] = "Chocolate";
-        char userstr[100];
+        char userstr[100];     
+
+
+
+        
 
         cstrlen = strlen(cstr);
         cin >> userstr;
