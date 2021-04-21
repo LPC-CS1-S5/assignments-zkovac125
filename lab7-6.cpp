@@ -28,29 +28,31 @@ int main()
 }
 void insertone( int number[], int &length, int usernum)
 {
-  int i,j;
-        if (*length == 0){
-            arr[*length] = usernum;
-            *length += 1;
-            return;
-        }
-        for(i=0; i< *length; i++) {
-            if  ( *(arr+i) > input)
-                break;
-        }
-        for(j= *length-1; j>=i; j--){
-            *(arr+j+1) = *(arr+j); 
-        }
-        arr[i] = usernum;
-        *length += 1;
-        for(i=0; i<*length; i++)
-             cout << *(arr+i) << " ";
-        cout << endl;
-        return;
+  int pos, i;
+  for(i=0; i<lenght; i++)
+    if( number[1] > usernum)
+      break;
+  pos =i;
+  for(i=length-1; i>=pos; i--)
+    number[i+1] = number[i];
+  number[i+1] = usernum;
+  length += 1;
+  return;
 }
 void deletone(int number[], int &length, int usernum)
 {
-  
+  int pos=length,1;
+  for(i=0; i<length;i++){
+    if(number[1] == usernum) {
+      pos =1;
+      break;
+    }
+  }
+  for(i=pos; i<length-1; i++{
+    number[1] = numnber[i+1];
+  }
+  number[length-1] =0;
+  length -=1;
 }
 void printout(int number[], int last)
 {

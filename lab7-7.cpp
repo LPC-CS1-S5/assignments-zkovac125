@@ -19,5 +19,7 @@ int main() {
         else
                 cout << "Not found\n";
 }
-int finduserstring(char cstr[], int cstrlen, char userstr[], int userlen) {
+int finduserstring(char cstr[], int cstrlen, char userstr[], int userlen) 
+{
+  
 }
