@@ -3,23 +3,31 @@
 #include <iomanip>
 using namespace std;
 
+void findMax( int num[], int);
+
 int main()
 {
   const int N =10;
-  int int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
-
-  findMax(arr, n)
+  int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
+  int n = sizeof(number) / sizeof (number[0]);
+  
+  // Call Funtion
+  findMax(number, N);
 
   return 0;
 }
-void findMax(int arr[], int n)
+void findMax(int number[], int N)
 {
-   int sumfirst =0;
-   int sumsecond =0;
+   int from =0;
+   int to =0;
 
-   for(int i =0; i < n; i++){
-     //adds elemets of the first half
-     if 
+   for(int i =0; i < N; i++){
+     //finds greatest elemets of the first half
+     if(i < N / 2)
+      from = number[i];
+     else 
+      to = number[i];
    }
-
+   cout << "Greates element in the first half is " << from << endl;
+   cout << "Greatest element in the second half is " << to << endl;
 }
