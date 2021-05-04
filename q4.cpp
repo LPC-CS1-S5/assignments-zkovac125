@@ -7,3 +7,30 @@
 #include <iterator>
 using namespace std;
 
+void makevector(vector<int> &, int);
+void printvector(cector<int>);
+void deletone(vector<int> &);
+int main()
+{
+  vector<int> number;
+  int size;
+  srand(time(0));
+  makevector(number, size);
+  printvector(number);
+  deleteone(number);
+}
+void makevector(vector<int> vec)
+{
+  for(int v : vec)
+    cout << v << "\t";
+  cout << endl;
+}
+void deletone(vector<int> &vec)
+{
+  int usernum;
+  int deletcnt
+  cin >> usernum;
+
+  cout << usernum << "is deleted " << deletcnt << " times \n";
+ 
+}
