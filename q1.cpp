@@ -9,7 +9,14 @@ const int N = 10;
 int main()
 {
   int number[N] = {10, 15, 0, 19, 20, 25, 30, 45, 20};
-
-  if (abs(n[i + 1]) < 10)
+ 
+  checkcond(N, i);
+  return 0;
+  }
+}
+void checkcond(int arr[], int N)
+{
+  for(i=0; i<N; i++){
+   if(abs(N[i + 1]) < 10)
     cout << "Less than 10\n";
 }
