@@ -9,13 +9,13 @@ void checkcond (a, n);
 int main()
 {
   int number[N] = {10, 15, 0, 19, 20, 25, 30, 45, 20};
-  int i;
+
   checkcond(int arr[], i);
   return 0;
 }
 void checkcond(int arr[], int N)
 {
   for(int i=0; i<N; i++)
-   if(abs(N[i] - N[i + 1]) < 10)
+   if(abs(N[i] - N[i + 1]) < 10);
     cout << "Less than 10\n";
 }
