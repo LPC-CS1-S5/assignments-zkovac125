@@ -3,13 +3,12 @@
 #include <iomanip>
 using namespace std;
 
-void findMax( int num[], int);
+void findMax(int num[], int);
 
 int main()
 {
   const int N =10;
   int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
-  int n = sizeof(number) / sizeof (number[0]);
   
   // Call Funtion
   findMax(number, N);
@@ -25,6 +24,7 @@ void findMax(int number[], int N)
      //finds greatest elemets of the first half
      if(i < N / 2)
       from = number[i];
+     // finds the greatest element in tbe second half
      else 
       to = number[i];
    }
