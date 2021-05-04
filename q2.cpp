@@ -26,3 +26,8 @@ void printtriangle(int num[3][3], int row, int col)
     cout << endl;
   }
 }
+
+
+
+
+
