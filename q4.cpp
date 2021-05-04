@@ -9,7 +9,7 @@ using namespace std;
 
 void makevector(vector<int> &, int);
 void printvector(vector<int>);
-void deletone(vector<int> &);
+void deleteone(vector<int> &);
 int main()
 {
   vector<int> number;
@@ -36,9 +36,13 @@ void deletone(vector<int> &vec)
   int deletcnt =0;
   cin >> usernum;
 
-  if (std:: vector<int>::iterator it = std::find(vec.begin(), vec.end(), usernum)
-  
-  vec.erase(std::remove(vec.begin(), vec.end(), usernum), vec.end());
+ for(int i=0; i<size; i++)
+ {
+   if ( i = usernum){
+   vec.erase(std::remove(vec.begin(), vec.end(), usernum), vec.end());
+   }
+   break;
+ }
 
   cout << usernum << "is deleted " << deletcnt << " times \n";
  printvector(vec);
