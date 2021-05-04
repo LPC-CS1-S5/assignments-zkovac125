@@ -1,7 +1,7 @@
 #inlcude <iostream>
 using namespace std;
 
-void proint triangle(int numbers[][3], int);
+void proint triangle(int numbers[][3], int, int);
 int main()
 {
   const int SIZE =3;
@@ -10,9 +10,19 @@ int main()
   int col = 3;
   print triangle(numbers, row, col);
 }
-void printtriangle(int num[][3], int size)
+void printtriangle(int num[][3], int row, int col)
 {
-  int i,j;
-  for(int i =0; i >=0; i--)
-    for
+  int i, j;
+  for(int i =0; i <SIZE; i++)
+  {
+    for(j =0; j < SIZE; j++) {
+      if (i < j)
+      {
+        cout << "0" << " ";
+      }
+      else 
+      cout << numbers[i][j] << " ";
+    } 
+    cout << endl;
+  }
 }
