@@ -1,13 +1,13 @@
-#inlcude <iostream>
+#include <iostream>
 #include <iomanip>
 using namespace std;
 
 int findcross(int [][10]);
 bool checkup(int [][10], int, int);
 bool checkdown(int [][10], int, int);
-bool checkleft (int [][10], int, int);
-bool checkright (int [][10], int, int);
-bool printout (int [][10], int);
+bool checkleft(int [][10], int, int);
+bool checkright(int [][10], int, int);
+bool printout(int [][10], int);
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
                              0, 1, 0, 0, 1, 1, 1, 0, 0, 0,
                              0, 1, 0, 0, 1, 0, 1, 1, 0, 0,
                              0, 1, 0, 0, 1, 1, 1, 0, 0, 0,
-                             0, 1, 0, 0, 1, 1, 1, 0, 0, 0 }
+                             0, 1, 0, 0, 1, 1, 1, 0, 0, 0 };
   cnt = findcross(maze);
   printout(maze, cnt);
 }
