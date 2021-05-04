@@ -21,6 +21,11 @@ int main()
 }
 void makevector(vector<int> vec)
 {
+  for(int i= 0; i<size; i++)
+    vec.push_back(rand() % 10);
+}
+void printvector(vector<int> vec)
+{
   for(int v : vec)
     cout << v << "\t";
   cout << endl;
@@ -31,6 +36,10 @@ void deletone(vector<int> &vec)
   int deletcnt
   cin >> usernum;
 
+  vec
+
+
+
   cout << usernum << "is deleted " << deletcnt << " times \n";
- 
+ printvector(vec)
 }
