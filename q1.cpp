@@ -8,9 +8,9 @@ void checkcond (a, n);
 
 int main()
 {
-  int number[N] = {10, 15, 0, 19, 20, 25, 30, 45, 20};
+  int number[N] = {10, 15, 0, -25, 19, 20, 25, 30, 45, 20};
 
-  checkcond(int arr[], i);
+  checkcond(int num[], i);
   return 0;
 }
 void checkcond(int arr[], int N)

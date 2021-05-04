@@ -1,0 +1,1 @@
+// Make the program that deletes the element in the vector.
