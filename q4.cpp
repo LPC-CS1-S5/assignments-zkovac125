@@ -13,7 +13,7 @@ void deletone(vector<int> &);
 int main()
 {
   vector<int> number;
-  int size;
+  int size = 20;
   srand(time(0));
   makevector(number, size);
   printvector(number);
@@ -33,8 +33,11 @@ void printvector(vector<int> vec)
 void deletone(vector<int> &vec)
 {
   int usernum;
-  int deletcnt;
+  int deletcnt =0;
   cin >> usernum;
+
+  if (std:: vector<int>::iterator it = std::find(vec.begin(), vec.end(), usernum)
+  
   vec.erase(std::remove(vec.begin(), vec.end(), usernum), vec.end());
 
   cout << usernum << "is deleted " << deletcnt << " times \n";
