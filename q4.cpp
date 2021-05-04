@@ -38,5 +38,5 @@ void deletone(vector<int> &vec)
   vec.erase(std::remove(vec.begin(), vec.end(), usernum), vec.end());
 
   cout << usernum << "is deleted " << deletcnt << " times \n";
- printvector(vec)
+ printvector(vec);
 }
