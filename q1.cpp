@@ -4,10 +4,12 @@
 using namespace std;
 
 const int N = 10;
-int number[N] = {10, 15, 0, 19, 20, 25, 30, 45, 20};
 
 
 int main()
 {
+  int number[N] = {10, 15, 0, 19, 20, 25, 30, 45, 20};
 
+  if (abs(n[i + 1]) < 10)
+    cout << "Less than 10\n";
 }
