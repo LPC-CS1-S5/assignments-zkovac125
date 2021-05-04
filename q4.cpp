@@ -8,7 +8,7 @@
 using namespace std;
 
 void makevector(vector<int> &, int);
-void printvector(cector<int>);
+void printvector(vector<int>);
 void deletone(vector<int> &);
 int main()
 {
@@ -33,12 +33,9 @@ void printvector(vector<int> vec)
 void deletone(vector<int> &vec)
 {
   int usernum;
-  int deletcnt
+  int deletcnt;
   cin >> usernum;
-
-  vec
-
-
+  vec.erase(std::remove(vec.begin(), vec.end(), usernum), vec.end());
 
   cout << usernum << "is deleted " << deletcnt << " times \n";
  printvector(vec)
