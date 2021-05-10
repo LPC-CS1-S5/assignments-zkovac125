@@ -22,29 +22,67 @@ int main()
   cout << "Enter your password\n";
   cin >> pwdstr;
 
-  if(
-      checklength(pwdstr) &&
-      checkdigit(pwdstr) &&
-      checklower(pwdstr) &&
-      checkupper(pwdstr) &&
-      checkspecial(pwdstr))
+  if( checklength(pwdstr) && checkdigit(pwdstr) &&checklower(pwdstr) && checkupper(pwdstr) && checkspecial(pwdstr))
       cout << "Your password is strong\n";
 }
+
 bool checklength(char pwdstr[]){
-  return false;
-}
-bool checklength(char pwdstr[]){
-  return false;
+  int i =0;
+  while(pwdstr[i] != '\0')
+  {
+    i++; 
+  }
+  if(i >= 6){
+    return true;
+  }
+  else
+   return false;
 }
 bool checkdigit(char pwdstr[]){
-  return false;
+  int i =0;
+  while(pwdstr[i] != '\0')
+  {
+    i++; 
+  }
+  if(checkdigit(pwdstr[i])){
+    return true;
+  }
+  else
+   return false;
 }
 bool checklower(char pwdstr[]){
-  return false;
+  int i =0;
+  while(pwdstr[i] != '\0')
+  {
+    i++; 
+  }
+  if(checklower(pwdstr[i])){
+    return true;
+  }
+  else
+   return false;
 }
 bool checkupper(char pwdstr[]){
-  return false;
+  int i =0;
+  while(pwdstr[i] != '\0')
+  {
+    i++; 
+  }
+  if(checkupper(pwdstr[i])){
+    return true;
+  }
+  else
+   return false;
 }
-bool checklength(char pwdstr[]){
-  return false;
+bool checkspecial(char pwdstr[]){
+  int i =0;
+  while(pwdstr[i] != '\0')
+  {
+    i++; 
+  }
+  if(checkspecial(pwdstr[i])){
+    return true;
+  }
+  else
+   return false;
 }
