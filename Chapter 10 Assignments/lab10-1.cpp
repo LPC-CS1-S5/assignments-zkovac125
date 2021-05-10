@@ -23,7 +23,11 @@ int main()
   cin >> pwdstr;
 
   if( checklength(pwdstr) && checkdigit(pwdstr) &&checklower(pwdstr) && checkupper(pwdstr) && checkspecial(pwdstr))
+  {
       cout << "Your password is strong\n";
+  }
+  else 
+      cout << " Your password needs to have six characters, at least one digit, an upper and lower case, and one special character. " << endl;
 }
 
 bool checklength(char pwdstr[]){
@@ -44,7 +48,7 @@ bool checkdigit(char pwdstr[]){
   {
     i++; 
   }
-  if(checkdigit(pwdstr[i])){
+  if(isdigit(pwdstr[i])){
     return true;
   }
   else
@@ -56,7 +60,7 @@ bool checklower(char pwdstr[]){
   {
     i++; 
   }
-  if(checklower(pwdstr[i])){
+  if(islower(pwdstr[i])){
     return true;
   }
   else
@@ -68,7 +72,7 @@ bool checkupper(char pwdstr[]){
   {
     i++; 
   }
-  if(checkupper(pwdstr[i])){
+  if(isupper(pwdstr[i])){
     return true;
   }
   else
@@ -80,7 +84,7 @@ bool checkspecial(char pwdstr[]){
   {
     i++; 
   }
-  if(checkspecial(pwdstr[i])){
+  if(ispunct(pwdstr[i])){
     return true;
   }
   else
