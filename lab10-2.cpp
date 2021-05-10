@@ -1,7 +1,6 @@
 #include <cctype>
 #include <cstring>
-#include
-<fstream>
+#include <fstream>
 #include <iostream>
 using namspace std;
 
@@ -31,11 +30,27 @@ int main()
   }
 }
 void tolowerstring(char str[]){
-
+  for(int i=0; i<strlen(str);i++)
+  {
+    str[i] = tolower(str[i]);
+  }
+  // make it lowercase
 }
 bool exactmatch(char readline[], char userinput[]){
-
+ int exact = strcmp(readline, userinput);
+ if (exact == 0)
+ return true;
+ else
+ return false;
 }
 bool partialmatch(char readline[], char userinput[]){
-  
+  int partialmatch = strstr(readline, userinput)
+  if(partialmatch == 0)
+  {
+    return true;
+  }
+  else{
+    return false;
+  }
+
 }
