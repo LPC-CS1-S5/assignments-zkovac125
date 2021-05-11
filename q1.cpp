@@ -3,7 +3,7 @@
 #include <cctype>
 #include <cstring>
 #include <fstream>
-#inlcude <iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -15,15 +15,17 @@ int main()
 {
   ifstream in_stream;
   char name[20];
-  char readline[20], 
-  char userinput;
+  char readline[20]; 
+  char userinput[20];
   userinput = "th";
 
 
   tolowerstring(userinput);
   in_stream.open("python.txt", fstream::in);
-  if(in_stream){
-    while(in_stream){
+  if(in_stream)
+  {
+    while(in_stream >> readline)
+    {
       tolowerstring(readline);
       if(exactmatch(readline, userinput))
         cout << "Exact match found" << readline << endl;
@@ -50,10 +52,15 @@ bool exactmatch(char readline[], char userinput[])
     return false;
   }
 }
-bool paritalmatch == 0)
+bool partialmatch(char readline[], char userinput[]) 
 {
-  return 1;
-}
-else{
-  return 0;
+  char *partialmatch;
+  partialmatch = strstr(readline, userinput)
+  if(partialmatch == 0){
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
 }
