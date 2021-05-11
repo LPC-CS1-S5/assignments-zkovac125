@@ -21,4 +21,13 @@ int main()
   cout << "Enter your email \n";
   cin >> email; //gets users email
 
+  if(idcheck(email))
+    cout << "ID check passed\n";
+  if(doamincheck(email))
+     cout << "Domain check passed\n";
+}
+bool idcheck(char email[])
+{
+  int i=0;
+  
 }
