@@ -18,20 +18,20 @@ int main()
   char readline[20]; 
   char userinput[20];
 
-  cout << "Enter th" << endl;
-  cin << userinput << endl;
+  cout << "Enter th \n";
+  cin >> userinput;
 
 
   tolowerstring(userinput);
   in_stream.open("python.txt", fstream::in);
-  if(in_stream)
-  {
-    while(in_stream >> readline)
-    {
+  if(in_stream){
+    while(in_stream >> readline){
       tolowerstring(readline);
       if(exactmatch(readline, userinput))
         cout << "Exact match found" << readline << endl;
+      }
       else if(partialmatch(readline, userinput))
+        cout << "Partial match found" << readline << " includes " << userinput << endl;
     }
   }
 }
