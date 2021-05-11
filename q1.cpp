@@ -31,24 +31,24 @@ int main()
     while(in_stream >> readline){
       tolowerstring(readline);
       if(exactmatch(readline, userinput))
-      for(i=0;exactmatch[i];i++)  
+      for(int i=0; exactmatch[i]; i++)  
       {
-    	  if(exactmatch[i]== "th")
+    	  if(exactmatch[i] == userinput)
     	  {
           count++;
 		    }
+        cout << "Number of " << userinput << " = " << count;
       }
-   }
-        
       else if(partialmatch(readline, userinput))
         int count = 0;
-      for(i=0;partialmatch[i];i++)  
+      for(int i=0; partialmatch[i]; i++)  
       {
-    	  if(partialmatch[i]== "th")
+    	  if(partialmatch[i]== userinput)
     	  {
           count++;
 		    }
       }
+      cout << "Number of " << userinput << " = " << count;
     }
   }
 }
@@ -65,12 +65,7 @@ bool exactmatch(char readline[], char userinput[])
   int count =0;
   int exact = strcmp(readline, userinput);
   if(exact == 0)
-  {}
-   for (int i = 0; i < int length; i++){
-      if (str[i] == th){
-         count++;
-      }
-   }
+  {
     return true;
   }
   else{
@@ -84,8 +79,6 @@ bool partialmatch(char readline[], char userinput[])
   if(partialmatch == 0){
     return 1;
       }
-   }
-  }
   else
   {
     return 0;
