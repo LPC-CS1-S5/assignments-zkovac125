@@ -41,7 +41,7 @@ int main()
       }
       else if(partialmatch(readline, userinput))
         int count = 0;
-      for(int i=0; partialmatch[i]; i++)  
+      for(int i=0; partialmatch[]; i++)  
       {
     	  if(partialmatch[i]== userinput)
     	  {
@@ -84,3 +84,4 @@ bool partialmatch(char readline[], char userinput[])
     return 0;
   }
 }
+//Had trouble making code to count. 
