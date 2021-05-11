@@ -10,3 +10,15 @@
 #include <cstring>
 
 using namespace std;
+
+bool idcheck(char []);
+bool domaincheck(char []);
+
+int main()
+{
+  char email[20];
+
+  cout << "Enter your email \n";
+  cin >> email; //gets users email
+
+}
