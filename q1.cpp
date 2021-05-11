@@ -14,11 +14,7 @@ bool partialmatch(char[], char[]);
 int main()
 {
   ifstream in_stream;
-  char name[20];
-  char readline[20];
-  
-  cout << "Enter your input\n";
-  cin >> userinput;
+  char name[20]
 
   tolowerstring(userinput);
   in_stream.open("python.txt", fstream::in);
@@ -39,4 +35,8 @@ void tolowerstring(char str[])
     //makes lowercase
   }
 }
-bool exactmatch(char)
+bool exactmatch(char readline[], char userinput[])
+{
+  int exact = strcmp(readline, userinput);
+  if(exact == 0)
+}
