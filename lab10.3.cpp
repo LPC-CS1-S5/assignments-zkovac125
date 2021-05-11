@@ -4,7 +4,7 @@
 // last string should be one of the list {com, edu, org, and net}
 #include		<iostream>
 #include		<cctype> //needed to use the isalnum function
-#include		<cstring> //neded to use for the strings
+#include		<cstring> //neded to use for the strings, and to take one or more string as an argument
 using namespace std;
 
 bool 	idcheck(char []); //id Function
@@ -29,7 +29,7 @@ bool 	idcheck(char email[])
 
   if(!isalnum(email[0]))
     return false;
-  while(email[i] != '@')
+  while(email[i] != '@') //Displays the input one character at a time.
   {
     if(isalnum(email[i++]))
       continue;
@@ -53,11 +53,11 @@ bool	domaincheck(char email[])
     if(email[i] == '.')
       break;
   } while(i-- > 0);
-  res = strstr(domainstr, email+i+1);
+  res = strstr(domainstr, email+i+1); //finds the first occurance of diaminstr and email and returns a pointer to match 
   if(res)
     return true;
   else 
     return false;
 }
 //For this code, we needed to use isalnum to find if arg is a letter or a digit.
-Used the array email for the lengthen as we can not account for user input.
+//Used the array email for the lengthen as we can not account for user input.
