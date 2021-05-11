@@ -14,7 +14,11 @@ bool partialmatch(char[], char[]);
 int main()
 {
   ifstream in_stream;
-  char name[20]
+  char name[20];
+  char readline[20], 
+  char userinput;
+  userinput = "th";
+
 
   tolowerstring(userinput);
   in_stream.open("python.txt", fstream::in);
@@ -39,4 +43,17 @@ bool exactmatch(char readline[], char userinput[])
 {
   int exact = strcmp(readline, userinput);
   if(exact == 0)
+  {
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+bool paritalmatch == 0)
+{
+  return 1;
+}
+else{
+  return 0;
 }
