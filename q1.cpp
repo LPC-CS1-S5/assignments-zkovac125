@@ -17,7 +17,9 @@ int main()
   char name[20];
   char readline[20]; 
   char userinput[20];
-  userinput = "th";
+
+  cout << "Enter th" << endl;
+  cin << userinput << endl;
 
 
   tolowerstring(userinput);
@@ -55,7 +57,7 @@ bool exactmatch(char readline[], char userinput[])
 bool partialmatch(char readline[], char userinput[]) 
 {
   char *partialmatch;
-  partialmatch = strstr(readline, userinput)
+  partialmatch = strstr(readline, userinput);
   if(partialmatch == 0){
     return 1;
   }
