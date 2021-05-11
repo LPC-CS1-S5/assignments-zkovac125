@@ -9,4 +9,25 @@ using namespace std;
 
 void tolowerstring(char[]);
 bool exactmatch(char[], char[]);
-bool
+bool partialmatch(char[], char[]);
+
+int main()
+{
+  ifstream in_stream;
+  char name[20];
+  char readline[20];
+  
+  cout << "Enter your input\n";
+  cin >> userinput;
+
+  tolowerstring(userinput);
+  in_stream.open("python.txt", fstream::in);
+  if(in_stream){
+    while(in_stream){
+      tolowerstring(readline);
+      if(exactmatch(readline, userinput))
+        cout << "Exact match found" << readline << endl;
+      else if(partialmatch(readline, userinput))
+    }
+  }
+}
