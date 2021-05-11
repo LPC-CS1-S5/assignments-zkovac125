@@ -11,19 +11,19 @@
 
 using namespace std;
 
-bool idcheck(char []);
-bool domaincheck(char []);
+bool idcheck(char []); //ID Check Function
+bool domaincheck(char []); //Domain Check Function
 
 int main()
 {
-  char email[20];
+  char email[20]; // Array Size
 
   cout << "Enter your email \n";
   cin >> email; //gets users email
 
-  if(idcheck(email))
+  if(idcheck(email)) //If iD check passes
     cout << "ID check passed\n";
-  if(doamincheck(email))
+  if(domaincheck(email)) //If domain check passes
      cout << "Domain check passed\n";
 }
 bool idcheck(char email[])
@@ -32,10 +32,10 @@ bool idcheck(char email[])
   int emaillength =10;
 
   if(!isalnum(email[0]))
-  return false;
-  while(email[i]) != '@')
+    return false;
+  while(email[i] != '@') //Displayes the input one charachter at a time.
   {
-    if(isalnum(email{i++}))
+    if(isalnum(email[i++]))
       continue;
     else
       return false;
@@ -45,7 +45,7 @@ bool idcheck(char email[])
   else  
     return false;
 }
-bool doamincheck(char email[])
+bool domaincheck(char email[])
 {
   char doaminstr[] = "com edu net org";
   char *res;
@@ -54,11 +54,10 @@ bool doamincheck(char email[])
   length = strlen(email);
   i = length-1;
 
-  do{
-    if(email[i] == '.')
+  do{ if(email[i] == '.')
     break;
-  }while(i-- >0);
-  res = strstr(doaminstr, email+i+1)
+  }while(i-- > 0);
+  res = strstr(doaminstr, email+i+1); //finds the first occurance of domainstr and email check if it matches.
   if(res)
     return true;
   else 
