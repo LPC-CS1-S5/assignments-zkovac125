@@ -47,8 +47,9 @@ bool exactmatch(char readline[], char userinput[]){
  return false;
  }
 }
-bool partialmatch(char readline[], char userinput[]){
-  char *partmatch;
+bool partialmatch(char readline[], char userinput[])
+{
+  char *partialmatch;
   partialmatch = strstr(readline, userinput);
   if(partialmatch == 0)
   {
