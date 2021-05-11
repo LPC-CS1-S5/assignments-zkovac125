@@ -63,3 +63,5 @@ bool domaincheck(char email[])
   else 
     return false;
 }
+//For this code, we needed to use "isalnum" to find if arg is a letter or a digit.
+//Used the array email for the length as we can not account for user input.
