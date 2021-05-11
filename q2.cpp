@@ -29,5 +29,38 @@ int main()
 bool idcheck(char email[])
 {
   int i=0;
-  
+  int emaillength =10;
+
+  if(!isalnum(email[0]))
+  return false;
+  while(email[i]) != '@')
+  {
+    if(isalnum(email{i++}))
+      continue;
+    else
+      return false;
+  }
+  if(i <= emaillength)
+    return true;
+  else  
+    return false;
+}
+bool doamincheck(char email[])
+{
+  char doaminstr[] = "com edu net org";
+  char *res;
+  int length;
+  int i;
+  length = strlen(email);
+  i = length-1;
+
+  do{
+    if(email[i] == '.')
+    break;
+  }while(i-- >0);
+  res = strstr(doaminstr, email+i+1)
+  if(res)
+    return true;
+  else 
+    return false;
 }
