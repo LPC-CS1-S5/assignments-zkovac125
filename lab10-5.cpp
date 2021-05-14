@@ -34,17 +34,26 @@ int	splitwords(string txt, char delimiter)
   splitstr=txt.substr(start, txt.length()-start);
     cout << "Split Word " << splitstr << endl;
     return cnt +1;
-  
-
-
-
-
-  find(',', position)
-  substr(start, found-start)
-  while(find('.'))
 }
-int	findnumchars(string txt)
+int	findnumchars(string txt) // Count the number of unique characters in the text line.//
 {
-	
+  int seen[26] = {0};
+  int index, uniquecnt =0;
+  string::iterator it;
+  for(it=text.begin(); it != text.end(); it++){
+    index = *it - 'A';
+	  if(seen[index] == 0){
+     seen[index] =1;
+      uniquecnt += 1;
+    }
+  }
+  for(int i=0; i<=26; i++){
+    if(seen[i] == 1){
+      cout << static_cast<char>(i+'A') << "\t";
+    }
+  }
+  cout << endl;
+  cout << "The number of unique charahcter are " << uniquecnt << endl;
+  return uniquecnt;
 }
 
