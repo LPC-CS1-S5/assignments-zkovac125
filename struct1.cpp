@@ -1,26 +1,37 @@
 // Chapter 11. Structured Data.
-// 
-// Struct1.cpp
+#include <iostream>
+using namespace std;
 
-#include	<iostream>
-using namespace	std;
-
-struct student
+int main()
 {
-	int	id;
-	string	name;
-	string	address;
-};
+	const int N=3;
+	struct Student
+	{
+		string sname;
+		string Id;
+		int scores[N];
+		int TotalScore;
+		int Avg;
+	}  ;
+  
+  student s1;
+  student s2;
+
+  if(s1 == s2)
+
+  cout << "Enter student name: ";
+  cin >> s.sname;
+  cout << "Enter ID: ";
+  cin >> s.Id;
+  s.TotalScore = 0;
+  for(int i=0; i<N; i++){
+	  cin >> s.scores[i];
+    s.TotalScore += s.scores[i];
+  }
+  s.Avg = s.TotalScore/ N;
+  
 
 
-int	main()
-{
-	student	s1;
-	student 	s2 = {10001, "Mary", "Lafayette"};
 
-	cout << "Enter the student's information (id, name, address)\n";
-	cin >> s1.id >> s1.name >> s1.address ;
-	cout << "Student Info S1\n" << s1. id << "\t" << s1.name << "\t" << s1.address << endl;
 	
-	cout << "Student Info S2\n" << s2. id << "\t" << s2.name << "\t" << s2.address << endl;
 }
