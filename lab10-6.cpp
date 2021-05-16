@@ -84,4 +84,5 @@ void    printRecord(int idx)
 {
         cout <<  stname[idx] << "\t\t" << gender[idx] << "\t" << year[idx] << "\t" << setw(10) << name[idx] << "\t" << cnt[idx] << "\n" ;
 }
-//One erro i had was i was trying to delacre setw() as a local variable when it shoul of not been. I just needed to use the header <iomanip
+//One error I had was I was trying to delacre setw() as a local variable when it shoul of not been. I just needed to use the header <iomanip>.
+// The function constructRecord reads all the files. 
