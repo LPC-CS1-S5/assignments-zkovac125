@@ -1,14 +1,9 @@
-// Chapter 11. Structured Data
-// Enumerated Data Types
-// Programming Lab 11-4
-// lab11-4.cpp
-
 #include	<iostream>
 #include	<fstream>
 #include	<string>
 using namespace std;
 
-const	int 	MAXSIZE=1000;
+const	int 	MAXSIZE=1000; //Nested Structure
 struct Namerecords {
 	string	stname;
 	string 	sex;
@@ -43,23 +38,26 @@ int		makingNameRecords(Namerecords nr[])
 	ifstream	ifso;
 
 	ifso.open("cany.txt");
-	if (!ifso) {
+	if (!ifso) 
+  {
 		cout << "File Open Error\n";
 		exit(0);
 	}
-	while((ifso >> readline) && (cnt < 1000) ) {
-		nr[cnt].stname 	= getstatename(readline);
-		nr[cnt].sex		= getgender(readline);
-		nr[cnt].year		= getyear(readline);
-		nr[cnt].name 		= getname(readline);
-		nr[cnt].count		= getcount(readline);
+	while((ifso >> readline) && (cnt < 1000) ) 
+  {
+		nr[cnt].stname = getstatename(readline);
+		nr[cnt].sex	= getgender(readline);
+		nr[cnt].yearn = getyear(readline);
+		nr[cnt].name 	= getname(readline);
+		nr[cnt].count		== getcount(readline);
 		cnt++;
 	}
 	return cnt;
 }
 void 		printNameRecords(Namerecords nr[], int numofRecords)
 {
-	for(int i=0; i<numofRecords; i++){
+	for(int i=0; i<numofRecords; i++)
+  {
 		cout << setw(5) << nr[i].stname << "\t";
 		cout << setw(3) << nr[i].sex << "\t";
 		cout << setw(5) << nr[i].year << "\t";
@@ -82,36 +80,36 @@ int 		getyear(string str)
 	int		yearlen=4;
 	int		year;
 	startpos = 0;
-	for(int i=0; i<2; i++) {
+	for(int i=0; i<2; i++) 
+  {
 		pos = str.find(',',startpos);
 		startpos = pos+1;
 	}
 	year = stoi(str.substr(pos+1, yearlen));
 	return year;
-
 }
 string 		getname(string str)
 {	
 	int		startpos, pos, endpos;
 	startpos = 0;
-	for(int i=0; i<3; i++) {
+	for(int i=0; i<3; i++) 
+  {
 		pos = str.find(',',startpos);
 		startpos = pos+1;
 	}
 	endpos = str.find(',', startpos);
 	return str.substr(startpos, endpos-startpos);
-
 }
 int 		getcount(string str)
 {
 	int		startpos, pos, count;
 	
 	startpos = 0;
-	for(int i=0; i<4; i++) {
+	for(int i=0; i<4; i++) 
+  {
 		pos = str.find(',',startpos);
 		startpos = pos+1;
 	}
 	count = stoi(str.substr(startpos, str.length()));
 	return count;
-
 }
