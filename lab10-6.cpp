@@ -1,4 +1,5 @@
 #include    <iostream>
+#include   <iomanip> 
 #include    <fstream>
 using namespace std;
 
@@ -38,7 +39,7 @@ int     constructRecord()
         ifs.open("allstate.txt");
         if (!ifs){
             cout << "File Open Error\n";
-            eixt(0);
+            exit(0);
         }
         idx = 0;
         while (ifs >> readline) {
@@ -81,6 +82,5 @@ void    retrieveRecord(int useryear, string userstate)
 }
 void    printRecord(int idx)
 {
-        cout <<  stname[idx] << "\t\t" << gender[idx] << "\t" << year[idx] << "\t" << 
-                setw(10) << name[idx] << "\t" << cnt[idx] << "\n" ;
+        cout <<  stname[idx] << "\t\t" << gender[idx] << "\t" << year[idx] << "\t" << setw(10) << name[idx] << "\t" << cnt[idx] << "\n" ;
 }
