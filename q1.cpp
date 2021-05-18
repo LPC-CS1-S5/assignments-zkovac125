@@ -22,6 +22,16 @@ void printRecords(EmployeeRec [], int);
 void findEmployee(EmployeeRec [], int, string);
 void searchEmployee(EmployeeRec, int, string);
 
+string getid(string);
+string getfirstname(string);
+string getlastname(string);
+int getsalary(string);
+string getdepartment(string);
+string getmonth(string);
+string getday(string);
+string getyear(string);
+int getcount(sting);
+
 int main
 {
   int numofRecords =0;
@@ -43,7 +53,16 @@ int makerecord(EmployeeRec s[])
     exit(0);
   }
   
-  while((ifso >> readline)&&(cnt < 1000) ){
+  while((ifso >> readline)&&(cnt < 1000))
+  {
+    nr[cnt].ID = getid(readline);
+    nr[cnt].first_name = getfirstname(readline);
+    nr[cnt].last_name = getlastname(readline);
+    nr[cnt].salary = getsalary(readline);
+    nr[cnt].department_name = getdepartment(readline);
+    nr[cnt].day = getday(readline);
+    nr[cnt].month = getmonth(readline);
+    nr
 
   }
   return cnt;
