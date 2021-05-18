@@ -48,12 +48,12 @@ int		makingNameRecords(Namerecords nr[])
   //If file is unable to open then it will show the error.
 	while((ifso >> readline) && (cnt < 1000) ) // read from the file, 
   {
-    //the array Namerecords that are filled with the fei;ds of the line from a file. 
+    //the array Namerecords that are filled with the feilds of the line from a file. 
 		nr[cnt].stname = getstatename(readline);
 		nr[cnt].sex	= getgender(readline);
 		nr[cnt].year = getyear(readline);
 		nr[cnt].name 	= getname(readline);
-		nr[cnt].count		== getcount(readline);
+		nr[cnt].count	== getcount(readline);
 		cnt++;
 	}
 	return cnt;

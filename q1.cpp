@@ -14,7 +14,7 @@ struct EmployeeRec{
   int month;
   int day;
   int year;
-  int count
+  int count;
 };
 
 int makerecord(EmployeeRec []);
@@ -25,20 +25,26 @@ void searchEmployee(EmployeeRec, int, string);
 int main
 {
   int numofRecords =0;
-  Namerecords nr[Max]
+  Namerecords nr[MAXSIZE];
+  numofRecords = makerecord9(nr);
+  printRecords(nr, numofRecords);
    
 }
 int makerecord(EmployeeRec s[])
 {
-  int i;
-  ifstream ifs;
+  int cnt=0;
+  string readline;
+  ifstream ifso;
 
   ifs.open("employee.txt")
-  if(ifs.fail())
+  if(!ifso)
   {
-    cerr << "File Open Error\n";
+    cout << "File Open Error\n";
     exit(0);
   }
-  i = 0;
-  while(ifs >> s[i].id >> )
+  
+  while((ifso >> readline)&&(cnt < 1000) ){
+
+  }
+  return cnt;
 }
