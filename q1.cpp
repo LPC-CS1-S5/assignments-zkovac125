@@ -1,21 +1,19 @@
 #include <iomanip>
-#inlucde <iostream>
+#include <iostream>
 #include <fstream>
 #include <string> 
-
-using namspace std;
-
+using namespace std;
+const int ID = 6;
 struct Date{
   string Month;
   int day;
   int year;
-
 }
 struct EmployeeRec{
   int ID;
   string first_name;
   string last_name;
-  int salary;
+  long salary;
   string department_name;
   Date dstart;
 }
@@ -41,5 +39,5 @@ int makerecord(EmployeeRec s[])
     exit(0);
   }
   i = 0;
-  while(ifs >> )
+  while(ifs >> s[i].id >> )
 }
