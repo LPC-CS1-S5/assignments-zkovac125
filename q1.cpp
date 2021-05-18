@@ -67,6 +67,15 @@ int makerecord(EmployeeRec s[])
   }
   return cnt;
 }
+void findEmployee(EmployeeRec s[], int N, string id)
+{
+  int found -0;
+  for(int i=0; i<N; i++)
+  {
+    for(s[id].name.find(EmployeeRec) != string::npos)
+    cout << ""
+  }
+}
 void printRecords(nr[], int numofRecords)
 {
   for(int i=0; i<numofRecords; i++){
