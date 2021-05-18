@@ -82,7 +82,13 @@ void printRecords(nr[], int numofRecords)
 {
   for(int i=0; i<numofRecords; i++){
     cout << setw(6) << nr[i].id << "\t";
-    cout << setw()
+    cout << setw(6) << nr[i].first_name << "\t";
+    cout << setw(6) << nr[i].last_name << "\t";
+    cout << setw(6) << nr[i].salary << "\t";
+    cout << setw(6) << nr[i].department_name << "\t";
+    cout << setw(6) << nr[i].day << "\t";
+    cout << setw(6) << nr[i].month << "\t";
+    cout << setw(6) << nr[i].year << "\t";
   }
 }
 void findEmployee(int [])
