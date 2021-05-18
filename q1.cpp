@@ -9,7 +9,7 @@ struct EmployeeRec{
   int id;
   string first_name;
   string last_name;
-  long salary;
+  float salary;
   string department_name;
   int month;
   int day;
@@ -83,5 +83,21 @@ void printRecords(nr[], int numofRecords)
   for(int i=0; i<numofRecords; i++){
     cout << setw(6) << nr[i].id << "\t";
     cout << setw()
+  }
+}
+void findEmployee(int [])
+{
+  int max
+  for(i=0; i<cnt; i++)
+  {
+    employee[i].search(salary);
+  }
+  max=employee[0].salary;
+  for(i=0; i<cnt; i++)
+  {
+    if(employee[i].salary>max)
+    {
+      max=emp[i].salary
+    }
   }
 }
