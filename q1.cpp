@@ -3,28 +3,29 @@
 #include <fstream>
 #include <string> 
 using namespace std;
-const int ID = 6;
-struct Date{
-  string Month;
-  int day;
-  int year;
-}
+
+const int MAXSIZE = 1000;
 struct EmployeeRec{
   int ID;
   string first_name;
   string last_name;
   long salary;
   string department_name;
-  Date dstart;
-}
+  int month;
+  int day;
+  int year;
+  int count
+};
 
-int makerecord(EmployeeRec [])
-void findEmployee(EmployeeRec [], int, string)
-void searchEmployee(EmployeeRec, int, string)
+int makerecord(EmployeeRec []);
+void printRecords(EmployeeRec [], int);
+void findEmployee(EmployeeRec [], int, string);
+void searchEmployee(EmployeeRec, int, string);
 
 int main
 {
- 
+  int numofRecords =0;
+  Namerecords nr[Max]
    
 }
 int makerecord(EmployeeRec s[])
