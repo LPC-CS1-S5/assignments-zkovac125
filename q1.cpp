@@ -14,7 +14,7 @@ struct EmployeeRec{
   int month;
   int day;
   int year;
-  int count;
+  int cnt;
 };
 
 int makerecord(EmployeeRec []);
@@ -97,7 +97,14 @@ void findEmployee(int [])
   {
     if(employee[i].salary>max)
     {
-      max=emp[i].salary
+      max=emp[i].salary;
     }
   }
+  for(i=0; i<cnt; i++)
+  {
+    if(emp[i].salary==max){
+    cout << "The Employee with the max Slaray is: " << employee[i].first_name;
+    }
+  }
+  return 0;
 }
