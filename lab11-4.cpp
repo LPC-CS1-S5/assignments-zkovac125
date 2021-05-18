@@ -1,10 +1,11 @@
 #include	<iostream>
+#include <iomanip> // Need this to use the setw()
 #include	<fstream>
 #include	<string>
 using namespace std;
 
-const	int 	MAXSIZE=1000; //Nested Structure
-struct Namerecords {
+const	int 	MAXSIZE=1000; 
+struct Namerecords { // Struct Array
 	string	stname;
 	string 	sex;
 	int 	year;
@@ -33,6 +34,7 @@ int main()
 }
 int		makingNameRecords(Namerecords nr[])
 {
+  //reads from a file and then parse the each feild by the delimiter','
 	int			cnt=0;
 	string		readline;
 	ifstream	ifso;
@@ -43,16 +45,19 @@ int		makingNameRecords(Namerecords nr[])
 		cout << "File Open Error\n";
 		exit(0);
 	}
-	while((ifso >> readline) && (cnt < 1000) ) 
+  //If file is unable to open then it will show the error.
+	while((ifso >> readline) && (cnt < 1000) ) // read from the file, 
   {
+    //the array Namerecords that are filled with the fei;ds of the line from a file. 
 		nr[cnt].stname = getstatename(readline);
 		nr[cnt].sex	= getgender(readline);
-		nr[cnt].yearn = getyear(readline);
+		nr[cnt].year = getyear(readline);
 		nr[cnt].name 	= getname(readline);
 		nr[cnt].count		== getcount(readline);
 		cnt++;
 	}
 	return cnt;
+  // returns the array elements and the same number of lines from a file
 }
 void 		printNameRecords(Namerecords nr[], int numofRecords)
 {
@@ -113,3 +118,4 @@ int 		getcount(string str)
 	count = stoi(str.substr(startpos, str.length()));
 	return count;
 }
+ 
