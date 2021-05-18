@@ -6,7 +6,7 @@ using namespace std;
 
 const int MAXSIZE = 1000;
 struct EmployeeRec{
-  int ID;
+  int id;
   string first_name;
   string last_name;
   long salary;
@@ -55,15 +55,21 @@ int makerecord(EmployeeRec s[])
   
   while((ifso >> readline)&&(cnt < 1000))
   {
-    nr[cnt].ID = getid(readline);
+    nr[cnt].id = getid(readline);
     nr[cnt].first_name = getfirstname(readline);
     nr[cnt].last_name = getlastname(readline);
     nr[cnt].salary = getsalary(readline);
     nr[cnt].department_name = getdepartment(readline);
     nr[cnt].day = getday(readline);
     nr[cnt].month = getmonth(readline);
-    nr
-
+    nr[cnt].year = getyear(readline);
+    cnt++
   }
   return cnt;
+}
+void printRecords(nr[], int numofRecords)
+{
+  for(int i=0; i<numofRecords; i++){
+    cout << setw(6) << nr[i].id <<
+  }
 }
