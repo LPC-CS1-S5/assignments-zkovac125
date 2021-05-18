@@ -73,7 +73,9 @@ void findEmployee(EmployeeRec s[], int N, string id)
   for(int i=0; i<N; i++)
   {
     for(s[id].name.find(EmployeeRec) != string::npos)
-    cout << ""
+    cout << "We found a record for " << first_name << " " << last_name << endl;
+    printRecords(s[i]);
+    found =1;
   }
 }
 void printRecords(nr[], int numofRecords)
