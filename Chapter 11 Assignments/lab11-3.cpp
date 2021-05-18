@@ -1,34 +1,30 @@
-// Chapter 11. Structured Data
-// Programming Lab 11-2
-// lab11-2.cpp
-
-#include	<iostream>
+/#include	<iostream>
 #include	<fstream>
 #include	<string>
 
 using namespace std;
 
 const	int 	NUMCOURSE =2;
-struct Scores {
+struct Score {
   int score[NUMCOURSE];
   int sum;
   int avg;
 };
-struct Students
+struct Student
 {
 	int		id;
 	string	name;
   Scores screcord;
 };
 
-int		makingstructarray(Students []); // return value : the number of struct array
-void	printout(Students s);
-void	findusername(Students [], int, string);
+int		makingstructarray(Student []); // return value : the number of struct array
+void	printout(Student s);
+void	findusername(Student [], int, string);
 
 int 	main()
 {
-	int	N;
-	Students	s[N];
+	int	;
+	Student	s[N];
 	string	username;
   int i;
   
@@ -79,7 +75,7 @@ void	findusername(Students s[], int N, string username)
   if(!found)
   cout << "We don't have the record for " << username << endl;
 }
-void	printout(Students s)
+void	printout(Student s)
 {
 		cout << "ID \t\t Name\t Score1\t Score2\t Sum\t Avg\n";
 		cout << s.id << "\t";
