@@ -11,19 +11,19 @@ struct Score {
   int score[NUMCOURSE];
   int sum;
   int avg;
-}
+};
 struct Student
 {
 	int		id;
 	string	name;
-  Scores screcord;
+  Score screcord;
 };
 int		makingstructarray(Student []); // return value : the number of struct array
-void	printout(Students s );
+void	printout(Student s );
 void	findusername(Student [],int, string);
 int 	main()
 {
-	int	numofRecords
+	int	numofRecords;
 	Student	s[numofRecords];
 	string	username;
   int i;
@@ -43,7 +43,7 @@ int		makingstructarray(Student s[])
   int i;
   ifstream ifs;
 
-  file.open ("students.txt"):
+  ifs.open ("students.txt");
   if(ifs.fail())
   {
     cerr << "File open failure!";
@@ -57,13 +57,24 @@ int		makingstructarray(Student s[])
     s[i].screcord.avg =s[i].screcord.sum / NUMCOURSE;
     i++;
   }
-  return i-1
+  return i-1;
 }
 void	findusername(Student s[], int numofRecords, string username)
 {
-	
+	int found =0;
+  for(int i=0; i<N; i++)
+  {
+    if(s[i].name,find(username) != string::npos){
+      cout << "We found the record for" << username << endl;
+      printrecord(s[i]);
+      found =1;
+    }
+
+  }
+  if(!found)
+  cout << "We don't have the record for " << username << endl;
 }
-void	printout(const Student s)
+void	printout(Student s)
 {
 	cout << s. id << "\t" << s.name << "\t"
 		<< s.score[0] << "\t" << s.score[1] << 
