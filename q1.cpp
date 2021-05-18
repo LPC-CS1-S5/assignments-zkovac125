@@ -70,6 +70,7 @@ int makerecord(EmployeeRec s[])
 void printRecords(nr[], int numofRecords)
 {
   for(int i=0; i<numofRecords; i++){
-    cout << setw(6) << nr[i].id <<
+    cout << setw(6) << nr[i].id << "\t";
+    cout << setw()
   }
 }
