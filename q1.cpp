@@ -4,113 +4,111 @@
 #include <string> 
 using namespace std;
 
-const int MAXSIZE = 1000;
+//const int MAXSIZE=1000;
 struct EmployeeRec{
   int id;
-  string first_name;
-  string last_name;
-  float salary;
+  string name;
+  int salary;
   string department_name;
   int month;
   int day;
   int year;
-  int cnt;
+  //int cnt;
 };
 
-int makerecord(EmployeeRec []);
-void printRecords(EmployeeRec [], int);
-void findEmployee(EmployeeRec [], int, string);
-void searchEmployee(EmployeeRec, int, string);
+void makerecord(EmployeeRec &, ifstream &);
+//void printRecords(EmployeeRec [], int);
+void findEmployee(EmployeeRec [], int);
+void searchEmployee(EmployeeRec [], int);
 
-string getid(string);
-string getfirstname(string);
-string getlastname(string);
-int getsalary(string);
-string getdepartment(string);
-string getmonth(string);
-string getday(string);
-string getyear(string);
-int getcount(sting);
+//string getid(string);
+//string getname(string);
+//int getsalary(string);
+//string getdepartment(string);
+//string getday(string);
+//string getmonth(string);
+//string getyear(string);
+//int getcount(string);
 
-int main
+int main()
 {
-  int numofRecords =0;
-  Namerecords nr[MAXSIZE];
-  numofRecords = makerecord9(nr);
-  printRecords(nr, numofRecords);
-   
-}
-int makerecord(EmployeeRec s[])
-{
-  int cnt=0;
-  string readline;
-  ifstream ifso;
-
-  ifs.open("employee.txt")
-  if(!ifso)
+  int const NUM_EMP= 10; // 10 for the number of employees
+  EmployeeRec emp[NUM_EMP]; //Needed this to be an array
+  ifstream ifs;
+  //numofRecords = makerecord(nr);
+  //printRecords(nr, numofRecords);
+  ifs.open("employee.txt");
+  if (!ifs)
   {
     cout << "File Open Error\n";
     exit(0);
   }
+  for(int i=0; i<NUM_EMP; i++)
+  {
+    makerecord (emp[i], ifs);
+  }
+  for(int i=0; i<NUM_EMP; i++){
+    cout << emp[i].id << endl;
+    cout << emp[i].name << endl;
+    cout << emp[i].salary << endl;
+    cout << emp[i].department_name << endl;
+    cout << emp[i].day << "/";
+    cout << emp[i].month << "/";
+    cout << emp[i].year << endl;
+  } //This eliminates the need for the printout function
+  findEmployee(emp, NUM_EMP );
+  searchEmployee(emp, NUM_EMP );
+}
+
+void makerecord(EmployeeRec &emp, ifstream &ifs)
+{
+  ifs >> emp.id;
+  ifs >> emp.name;
+  ifs >> emp.salary;
+  ifs >> emp.department_name;
+  ifs >> emp.month;
+  ifs >> emp.day;
+  ifs >> emp.year;
+}
+void findEmployee(EmployeeRec emp[], int size)
+{
+  int comp =100000;
   
-  while((ifso >> readline)&&(cnt < 1000))
-  {
-    nr[cnt].id = getid(readline);
-    nr[cnt].first_name = getfirstname(readline);
-    nr[cnt].last_name = getlastname(readline);
-    nr[cnt].salary = getsalary(readline);
-    nr[cnt].department_name = getdepartment(readline);
-    nr[cnt].day = getday(readline);
-    nr[cnt].month = getmonth(readline);
-    nr[cnt].year = getyear(readline);
-    cnt++
-  }
-  return cnt;
-}
-void findEmployee(EmployeeRec s[], int N, string id)
-{
-  int found -0;
-  for(int i=0; i<N; i++)
-  {
-    for(s[id].name.find(EmployeeRec) != string::npos)
-    cout << "We found a record for " << first_name << " " << last_name << endl;
-    printRecords(s[i]);
-    found =1;
-  }
-}
-void printRecords(nr[], int numofRecords)
-{
-  for(int i=0; i<numofRecords; i++){
-    cout << setw(6) << nr[i].id << "\t";
-    cout << setw(6) << nr[i].first_name << "\t";
-    cout << setw(6) << nr[i].last_name << "\t";
-    cout << setw(6) << nr[i].salary << "\t";
-    cout << setw(6) << nr[i].department_name << "\t";
-    cout << setw(6) << nr[i].day << "\t";
-    cout << setw(6) << nr[i].month << "\t";
-    cout << setw(6) << nr[i].year << "\t";
-  }
-}
-void findEmployee(int [])
-{
-  int max
-  for(i=0; i<cnt; i++)
-  {
-    employee[i].search(salary);
-  }
-  max=employee[0].salary;
-  for(i=0; i<cnt; i++)
-  {
-    if(employee[i].salary>max)
+  bool found = false;
+  for(int i=0; i<amount; i++)
+    if(comp < emp[i].salary)
     {
-      max=emp[i].salary;
+      cout << emp[i].id << endl;
+      cout << emp[i].name << endl;
+      cout << emp[i].salary << endl;
+      cout << emp[i].department_name << endl;
+      cout << emp[i].day << "/";
+      cout << emp[i].month << "/";
+      cout << emp[i].year << endl;
+      found = true;
+    }
+    if(!found)
+      cout << "There is no employee with a salary greater than 100,000" << endl;
+}
+void searchEmployee(EmployeeRec emp[], int amount)
+{
+  string userentry;
+  cout << "Enter a department \n";
+  cin >> userentry;
+  bool found = false;
+  for(int i=0; i<amount; i++){
+    if(userentry == emp[i].department_name){
+      cout << emp[i].id << endl;
+      cout << emp[i].name << endl;
+      cout << emp[i].salary << endl;
+      cout << emp[i].department_name << endl;
+      cout << emp[i].day << "/";
+      cout << emp[i].month << "/";
+      cout << emp[i].year << endl;
+      found = true;
+    }
+    if(!found){
+      cout << "There is no " << userentry << " department." << endl;
     }
   }
-  for(i=0; i<cnt; i++)
-  {
-    if(emp[i].salary==max){
-    cout << "The Employee with the max Slaray is: " << employee[i].first_name;
-    }
-  }
-  return 0;
 }

@@ -25,7 +25,7 @@ int		getcount(string);
 
 int main()
 {
-	int				numofRecords = 0;
+	int numofRecords = 0;
 	Namerecords 	nr[MAXSIZE];
 
 	numofRecords = makingNameRecords(nr);
@@ -53,7 +53,7 @@ int		makingNameRecords(Namerecords nr[])
 		nr[cnt].sex	= getgender(readline);
 		nr[cnt].year = getyear(readline);
 		nr[cnt].name 	= getname(readline);
-		nr[cnt].count	== getcount(readline);
+		nr[cnt].count	= getcount(readline);
 		cnt++;
 	}
 	return cnt;
