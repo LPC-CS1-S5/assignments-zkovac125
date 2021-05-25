@@ -27,5 +27,18 @@ int main()
     cout << "File Open Error"'
     exit(0);
   }
-  while(ifs.read((char )))
+  while(ifs.read((char *)&g, sizeof(g))){
+    printstruct(g);
+  }
+}
+void pritnstruct(Grade g)
+{
+  cout << "Name: " << g.first << g.last << "\t" << "SSN: " << g.ssn << "\n";
+  coutn<< "t\Scores: ";
+  for(int i=0; i<N; i++)
+    cout << showpoint << setpercision(2) << g/socre.sc[i] << "\t";
+      cout << "Grade " << g.socre.grade << endl;
+}
+
+
 }
