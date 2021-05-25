@@ -18,17 +18,17 @@ int main()
   {1, 2, 1, 2, 3}};
   findMaxSum(result, numbers, NUM_ROWS, NUM_COLS);
   cout << "The row vlaues are ";
-  for(int i=0; i<rows; i++)
+  for(int i=0; i<NUM_ROWS; i++)
     cout << setw(5) << result[i];
   cout << endl;
 }
-void findMaxSum(int result[], int num[][5], int rows, int cols)
+void findMaxSum(int result[], int num[][5], int NUM_ROWS, int NUM_COLS)
 {
   int sumrow =0, sum =0, idx;
-  for(int i=0; i<rows; i++)
+  for(int i=0; i<NUM_ROWS; i++)
   {
     sum =0;
-    for(int j=0; j<cols; j++){
+    for(int j=0; j<NUM_COLS; j++){
       cout << setw(5) << num[i][j];
       sum += num[i][j];
     }
@@ -40,6 +40,6 @@ void findMaxSum(int result[], int num[][5], int rows, int cols)
     idx =i;
     }
   }
-  for (int i=0; i<cols; i++)
+  for (int i=0; i<NUM_COLS; i++)
     result[i] = num[idx][i];
 }
