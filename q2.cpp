@@ -16,19 +16,19 @@ int main()
   {9, 9, 0, 3, 1},
   {8, 8, 7, 8, 9},
   {1, 2, 1, 2, 3}};
-  findMaxSum(result, numner, NUM_ROWS, NUM_COLS);
+  findMaxSum(result, numbers, NUM_ROWS, NUM_COLS);
   cout << "The row vlaues are ";
   for(int i=0; i<rows; i++)
     cout << setw(5) << result[i];
   cout << endl;
 }
-void findMaxSum(int result[]. int num[][5]. int rows, int cols)
+void findMaxSum(int result[], int num[][5], int rows, int cols)
 {
   int sumrow =0, sum =0, idx;
   for(int i=0; i<rows; i++)
   {
     sum =0;
-    for(int j=o; j<cols; j++){
+    for(int j=0; j<cols; j++){
       cout << setw(5) << num[i][j];
       sum += num[i][j];
     }
