@@ -19,5 +19,14 @@ int main()
   findMaxSum(result, numner, NUM_ROWS, NUM_COLS);
   cout << "The row vlaues are ";
   for(int i=0; i<rows; i++)
+    cout << setw(5) << result[i];
+  cout << endl;
+}
+void findMaxSum(int result[]. int num[][5]. int rows, int cols)
+{
+  int sumrow =0, sum =0, idx;
+  for(int i=0; i<rows; i++)
+  {
+
   }
 }
