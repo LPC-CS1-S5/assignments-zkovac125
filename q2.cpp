@@ -27,6 +27,19 @@ void findMaxSum(int result[]. int num[][5]. int rows, int cols)
   int sumrow =0, sum =0, idx;
   for(int i=0; i<rows; i++)
   {
-
+    sum =0;
+    for(int j=o; j<cols; j++){
+      cout << setw(5) << num[i][j];
+      sum += num[i][j];
+    }
+    cout << "The sum of the row is " << setw(5) << sum << endl;
+    if(i==0)
+      sumrow =sum; 
+    else if(sumrow<sum){
+      sumrow = sum;
+    idx =i;
+    }
   }
+  for (int i=0; i<cols; i++)
+    result[i] = num[idx][i];
 }
