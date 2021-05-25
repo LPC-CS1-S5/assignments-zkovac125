@@ -14,17 +14,11 @@ int main()
   bool found = false;
     for(int i=0; i<SIZE1; i++)
     {
-      found = false;
-      for(int j=0; j<SIZE2; j++){
+      for(int j=0; j<SIZE2; j++)
+      {
         if(array1[i] == array2[j]){
-          found = true;
-          if(found){
-            cout << array1[i] << "found" << endl;
-          }
-        }
-          if(found){
           cout << array1[i] << "found" << endl;
-        }
+          }        
         else{
           cout << array1[i] << " is not found in second array" << endl;
           break;
