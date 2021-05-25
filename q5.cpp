@@ -39,6 +39,3 @@ void pritnstruct(Grade g)
     cout << showpoint << setpercision(2) << g/socre.sc[i] << "\t";
       cout << "Grade " << g.socre.grade << endl;
 }
-
-
-}
