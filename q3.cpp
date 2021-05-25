@@ -12,5 +12,21 @@ int main()
 
   //looks for the emenet of the first array in the second arry analyzing one-by-one. 
   bool found = flase;
-    for()
+    for(int i=0; i<SIZE1; i++)
+    {
+      found = flase;
+      for(int j =0; j<SIZE2; j++){
+        if(array1[i]== array2[j]){
+          found = true;
+        }
+        if(found)
+        {
+          cout << array1[i] << "found" << endl;
+        }
+        else{
+          cout MM array1[i] << " is not found in second array" endl;
+          break;
+        }
+      }
+    }
 }
