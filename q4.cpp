@@ -4,7 +4,9 @@
 #include <fstream>
 
 using namespace std;
-int countsubs(string, keystring);
+int keyword;
+
+int countsubs(keyword);
 
 int main()
 {
@@ -14,17 +16,17 @@ int main()
 
     cout << "Enter user string "; 
     cin >> userinput;
-  cnt = countsubs(userinput);
+  cnt = countsubs(userinput, words);
   cout << "The count of occurences: " << cnt << endl;
 }
-int countsubs(string words; )
+int countsubs(keyword);
 {
   int found, start, count =0;
   
   string readstring;
-  while( words >> readstring){
+  while( keyword >> readstring){
     start =0;
-    while(((found = readstring.find(keystring, start)) != string::npos))
+    while(((found = readstring.find(keyword, start)) != string::npos))
     {
       count +=1;
       cout << "Found in " << readstring << " " << "at " << found + 1;
