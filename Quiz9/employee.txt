@@ -1,0 +1,6 @@
+100001 	Mary Lue 	200000 Sales Jan 20 2020
+100002 	Kathy	Baker 400000 Computer Jul 1 2021
+100003 	Rhona	Lua 300000 Marketing Mar 17 2019
+100004 	Elaine Davids 350000 Lab Aug 7 2020
+100005 	Lorita Star 250000 Sales Sep 8 2021
+100006 	Smith	Charles 425000 Finances Nov 15 2021
